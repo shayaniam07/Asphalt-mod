@@ -1,6 +1,25 @@
-      - name: Upload Dylib
+name: Build Dylib
+on: 
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Theos
+        uses: theos/setup-theos@master
+
+      - name: Build Tweak
+        run: |
+          make package FINALPACKAGE=1
+          
+      - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: MyMod-Dylib
-          path: "**/*.dylib"
-
+          name: MyPatchedDylib
+          path: .theos/obj/*.dylib
