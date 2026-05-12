@@ -1,5 +1,5 @@
-TARGET := iphone:clang:latest:14.0
-ARCHS := arm64
+ARCHS = arm64
+TARGET = iphone:clang:latest:14.0
 
 include $(THEOS)/makefiles/common.mk
 
@@ -8,4 +8,3 @@ MyAsphaltMod_FILES = Tweak.xm
 MyAsphaltMod_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/tweak.mk
-
