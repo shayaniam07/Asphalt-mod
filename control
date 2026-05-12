@@ -1,5 +1,6 @@
-Package: com.yourname.asphaltmod
+Package: com.shayaniam07.asphaltmod
 Name: MyAsphaltMod
 Depends: mobilesubstrate
-Version: 1.0
+Version: 0.0.1
 Architecture: iphoneos-arm
+Section: Tweaks
