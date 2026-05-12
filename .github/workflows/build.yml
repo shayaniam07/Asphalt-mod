@@ -1,1 +1,6 @@
+      - name: Upload Dylib
+        uses: actions/upload-artifact@v3
+        with:
+          name: MyMod-Dylib
+          path: "**/*.dylib"
 
